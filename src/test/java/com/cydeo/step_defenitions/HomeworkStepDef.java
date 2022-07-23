@@ -1,6 +1,7 @@
 package com.cydeo.step_defenitions;
 
 import com.cydeo.pages.LoginHomework;
+import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -22,6 +23,7 @@ public class HomeworkStepDef {
     @Given("uer is on the Vehicles \\(Cars) page")
     public void uer_is_on_the_vehicles_cars_page() throws InterruptedException {
         Driver.getDriver().get("https://qa2.vytrack.com/user/login");
+
         loginHomework.login();
         loginHomework.fleet.click();
         loginHomework.vehicles.click();

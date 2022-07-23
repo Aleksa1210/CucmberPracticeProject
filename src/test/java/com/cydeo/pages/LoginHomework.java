@@ -1,5 +1,6 @@
 package com.cydeo.pages;
 
+import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
 import okhttp3.internal.http2.Settings;
 import org.openqa.selenium.WebElement;
@@ -58,6 +59,13 @@ public class LoginHomework {
         password.sendKeys("UserUser123");
         loginBtn.click();
 
+    }
+
+
+    public void login2(){
+        Driver.getDriver().get(ConfigurationReader.getProperty("log"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("password12"));
+        loginBtn.click();
     }
 
 
